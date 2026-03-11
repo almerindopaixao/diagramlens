@@ -10,7 +10,10 @@ from app.services import process_video_stream
 
 app = FastAPI(
     title="Mestrado API",
-    description="Backend de processamento de video para tecnologia assistiva",
+    description=(
+        "API backend para processamento de vídeos voltada à tecnologia assistiva, "
+        "Projetada para pesquisa acadêmica e desenvolvimento de soluções inovadoras na área de inclusão digital."
+    ),
     version="1.0.0",
 )
 
