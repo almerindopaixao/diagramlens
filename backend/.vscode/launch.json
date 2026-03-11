@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "FastAPI: dev",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "fastapi",
+        "args": ["dev", "main.py"],
+        "cwd": "${workspaceFolder}",
+        "envFile": "${workspaceFolder}/.env",
+        "console": "integratedTerminal",
+        "env": {
+            "PYTHONDONTWRITEBYTECODE": "1"
+        }
+    }]
+}
