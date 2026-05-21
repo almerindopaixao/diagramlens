@@ -148,7 +148,7 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
             <h3 className="text-lg font-semibold text-foreground">
               {isValidating
                 ? "Validando video..."
-                : "Arraste o video da aula aqui"}
+                : "Arraste a videoaula aqui"}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {"ou clique para selecionar um arquivo"}

@@ -10,9 +10,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Projeto - Descricao de Elementos Visuais em Aulas',
+  title: 'DiagramLens - Audiodrescrição de diagramas em videos',
   description:
-    'Ferramenta de tecnologia assistiva que analisa videos de aulas e gera descricoes textuais acessiveis de elementos figurados como diagramas, tabelas e graficos para estudantes com deficiencia visual.',
+    'Ferramenta de tecnologia assistiva que analisa videoaulas e gera audiodescrições de diagramas para estudantes com deficiencia visual.',
 }
 
 export const viewport: Viewport = {

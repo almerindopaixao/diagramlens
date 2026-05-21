@@ -365,10 +365,10 @@ export default function HomePage() {
           </div>
           <div>
             <h1 className="text-lg font-bold text-foreground tracking-tight">
-              Projeto
+              DiagramLens
             </h1>
             <p className="text-xs text-muted-foreground">
-              Descrição de elementos visuais em videoaulas para acessibilidade
+              Audiodrescrição de diagramas em video
             </p>
           </div>
         </div>
@@ -389,9 +389,8 @@ export default function HomePage() {
                   Torne suas aulas mais acessiveis
                 </h2>
                 <p className="text-muted-foreground leading-relaxed max-w-lg text-pretty">
-                  Faça upload de um video de aula e nossa inteligência artificial
-                  ira identificar e descrever automaticamente todos os elementos
-                  figurados como diagramas, tabelas e gráficos.
+                  Faça upload de uma videoaula e nossa inteligência artificial
+                  ira identificar e audiodescrever automaticamente os diagramas presentes no vídeo.
                 </p>
               </div>
 
@@ -504,7 +503,7 @@ export default function HomePage() {
       <footer className="border-t bg-card" role="contentinfo">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
           <p className="text-xs text-muted-foreground text-center leading-relaxed">
-            Prototipo em tecnologia assistiva. Promovendo acessibilidade e autonomia para profissionais
+            Prototipo em tecnologia assistiva. Promovendo acessibilidade e autonomia para estudantes
             com deficiencia visual.
           </p>
         </div>
