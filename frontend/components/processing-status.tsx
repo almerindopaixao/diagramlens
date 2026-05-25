@@ -71,7 +71,7 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
   const stages = [
     {
       key: "uploading",
-      label: "Envio do video",
+      label: "Envio do vídeo",
       icon: Upload,
     },
     {
@@ -81,12 +81,12 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
     },
     {
       key: "detecting_elements",
-      label: "Identificacao de elementos",
+      label: "Identificação de elementos",
       icon: Search,
     },
     {
       key: "analyzing_ai",
-      label: "Descricao por IA",
+      label: "Descrição por IA",
       icon: BrainCircuit,
     },
   ]
@@ -154,9 +154,9 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
               }
             } else if (stage.key === "analyzing_ai" && (isDone || isActive)) {
               if (isActive && aiTotal > 0) {
-                detail = `${aiProcessed}/${aiTotal} descricoes`
+                detail = `${aiProcessed}/${aiTotal} descrições`
               } else if (isDone) {
-                detail = `${annotations.length} descricoes geradas`
+                detail = `${annotations.length} descrições geradas`
               }
             }
 

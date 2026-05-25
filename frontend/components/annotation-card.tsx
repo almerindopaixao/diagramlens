@@ -22,7 +22,7 @@ export function AnnotationCard({
   const typeLabel =
     ELEMENT_TYPE_LABELS[annotation.elementType] || annotation.elementType
 
-  // Melhor detecção YOLO (maior confianca)
+  // Melhor detecção YOLO (maior confiança)
   const topDetection = annotation.yoloDetections?.length
     ? annotation.yoloDetections.reduce((a, b) =>
         a.confidence > b.confidence ? a : b
@@ -39,7 +39,7 @@ export function AnnotationCard({
 
   return (
     <article
-      aria-label={`Anotacao em ${formatTimestamp(annotation.timestamp)}: ${typeLabel}`}
+      aria-label={`Anotação em ${formatTimestamp(annotation.timestamp)}: ${typeLabel}`}
       aria-current={isActive ? "true" : undefined}
       className={`flex gap-3 rounded-lg border p-3 transition-colors ${
         isActive
@@ -67,7 +67,7 @@ export function AnnotationCard({
             </Badge>
           )}
 
-          {/* Badge do tipo da descricao IA */}
+          {/* Badge do tipo da descrição IA */}
           {annotation.description && (
             <Badge variant="secondary" className="text-xs shrink-0">
               {typeLabel}
@@ -86,7 +86,7 @@ export function AnnotationCard({
           </p>
         ) : (
           <p className="text-sm text-muted-foreground italic">
-            Aguardando descricao da IA...
+            Aguardando descrição da IA...
           </p>
         )}
 
@@ -107,7 +107,7 @@ export function AnnotationCard({
               size="sm"
               className="h-7 px-2 text-xs"
               onClick={() => onSpeak(annotation.description)}
-              aria-label={`Ouvir descricao: ${typeLabel}`}
+              aria-label={`Ouvir descrição: ${typeLabel}`}
             >
               <Volume2 className="h-3 w-3" />
               Ouvir

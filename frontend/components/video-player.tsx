@@ -44,10 +44,10 @@ export function VideoPlayer({
           controls
           onTimeUpdate={handleTimeUpdate}
           className="w-full aspect-video"
-          aria-label="Player de video da aula"
+          aria-label="Player de vídeo da aula"
         >
-          <track kind="descriptions" label="Descricoes de elementos visuais" />
-          Seu navegador nao suporta o elemento de video.
+          <track kind="descriptions" label="Descrições de elementos visuais" />
+          Seu navegador não suporta o elemento de vídeo.
         </video>
       </div>
 
@@ -55,7 +55,7 @@ export function VideoPlayer({
         <div
           ref={progressRef}
           role="img"
-          aria-label={`Mapa de anotacoes: ${annotations.length} elementos figurados encontrados ao longo do video`}
+          aria-label={`Mapa de anotações: ${annotations.length} elementos figurados encontrados ao longo do vídeo`}
           className="relative h-3 rounded-full bg-muted overflow-hidden"
         >
           {annotations.map((ann) => {
@@ -71,7 +71,7 @@ export function VideoPlayer({
                     videoRef.current.play().catch(() => {})
                   }
                 }}
-                aria-label={`Anotacao em ${formatTimestamp(ann.timestamp)}: ${ann.elementType}`}
+                aria-label={`Anotação em ${formatTimestamp(ann.timestamp)}: ${ann.elementType}`}
                 title={`${formatTimestamp(ann.timestamp)} - ${ann.elementType}`}
               />
             )

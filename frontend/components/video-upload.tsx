@@ -20,7 +20,7 @@ function getVideoDuration(file: File): Promise<number> {
     }
     video.onerror = () => {
       URL.revokeObjectURL(url)
-      reject(new Error("Nao foi possivel ler o video"))
+      reject(new Error("Não foi possível ler o vídeo"))
     }
   })
 }
@@ -44,7 +44,7 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
       try {
         if (!ACCEPTED_FORMATS.includes(file.type)) {
           setError(
-            "Formato nao suportado. Utilize arquivos MP4, WebM ou MOV."
+            "Formato não suportado. Utilize arquivos MP4, WebM ou MOV."
           )
           return
         }
@@ -52,7 +52,7 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
         const fileSizeMB = file.size / (1024 * 1024)
         if (fileSizeMB > MAX_FILE_SIZE_MB) {
           setError(
-            `Arquivo muito grande (${fileSizeMB.toFixed(0)}MB). O limite e ${MAX_FILE_SIZE_MB}MB.`
+            `Arquivo muito grande (${fileSizeMB.toFixed(0)}MB). O limite é ${MAX_FILE_SIZE_MB}MB.`
           )
           return
         }
@@ -61,14 +61,14 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
         if (duration > MAX_DURATION_SECONDS) {
           const mins = Math.floor(duration / 60)
           setError(
-            `Video muito longo (${mins} min). O limite e 15 minutos.`
+            `Vídeo muito longo (${mins} min). O limite é 15 minutos.`
           )
           return
         }
 
         onVideoSelected(file)
       } catch {
-        setError("Erro ao validar o video. Tente novamente.")
+        setError("Erro ao validar o vídeo. Tente novamente.")
       } finally {
         setIsValidating(false)
       }
@@ -122,7 +122,7 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
         <div
           role="button"
           tabIndex={disabled ? -1 : 0}
-          aria-label="Area de upload de video. Arraste e solte ou clique para selecionar."
+          aria-label="Área de upload de vídeo. Arraste e solte ou clique para selecionar."
           aria-disabled={disabled}
           className="flex flex-col items-center justify-center gap-4 p-12 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
           onDragOver={handleDragOver}
@@ -154,7 +154,7 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
               {"ou clique para selecionar um arquivo"}
             </p>
             <p className="text-xs text-muted-foreground">
-              {"Formatos: MP4, WebM, MOV | Maximo: 15 minutos | Ate 500MB"}
+              {"Formatos: MP4, WebM, MOV | Máximo: 15 minutos | Até 500MB"}
             </p>
           </div>
 

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     if (!imageBase64) {
       return Response.json(
-        { error: "Imagem nao fornecida" },
+        { error: "Imagem não fornecida" },
         { status: 400 }
       )
     }
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
           content: [
             {
               type: "text",
-              text: `Analise este frame capturado no timestamp ${timestamp}s de uma aula em video. Identifique se contem algum elemento figurado visual (diagrama, tabela, grafico, fluxograma, codigo, formula, etc.) e forneca uma descricao acessivel detalhada em portugues do Brasil.`,
+              text: `Analise este frame capturado no timestamp ${timestamp}s de uma aula em vídeo. Identifique se contém algum elemento figurado visual (diagrama, tabela, gráfico, fluxograma, código, fórmula, etc.) e forneça uma descrição acessível detalhada em português do Brasil.`,
             },
             {
               type: "image",

@@ -111,7 +111,7 @@ export default function HomePage() {
         setProcessing((prev) => ({
           ...prev,
           status: "complete",
-          message: `Processamento concluido. Nenhum elemento figurado encontrado.`,
+          message: `Processamento concluído. Nenhum elemento figurado encontrado.`,
         }))
         return
       }
@@ -121,7 +121,7 @@ export default function HomePage() {
         status: "analyzing_ai",
         aiTotal: detectedFrames.length,
         aiProcessed: 0,
-        message: `Gerando descricoes acessiveis... (0/${detectedFrames.length})`,
+        message: `Gerando descrições acessíveis... (0/${detectedFrames.length})`,
       }))
 
       let processed = 0
@@ -151,8 +151,9 @@ export default function HomePage() {
             annotations: updatedAnnotations,
             status: isDone ? "complete" : "analyzing_ai",
             message: isDone
-              ? `Concluido! ${updatedAnnotations.filter((a) => a.description).length} descricoes geradas.`
-              : `Gerando descricoes acessiveis... (${processed}/${detectedFrames.length})`,
+              ? `Concluído! ${updatedAnnotations.filter((a) => a.description).length} descrições geradas.`
+              : `Gerando descrições acessíveis... (${processed}/${detectedFrames.length})`,
+
           }
         })
       }
@@ -263,7 +264,7 @@ export default function HomePage() {
                 processingTime: event.summary.processing_time,
                 totalScenes: event.summary.total_scenes,
                 framesWithElements: event.summary.frames_with_elements,
-                message: `Descoberta concluida: ${event.summary.frames_with_elements} elementos em ${event.summary.total_scenes} cenas.`,
+                message: `Descoberta concluída: ${event.summary.frames_with_elements} elementos em ${event.summary.total_scenes} cenas.`,
               }))
               break
             }
@@ -355,7 +356,7 @@ export default function HomePage() {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
       >
-        Ir para o conteudo principal
+        Ir para o conteúdo principal
       </a>
 
       <header className="border-b bg-card" role="banner">
@@ -368,7 +369,7 @@ export default function HomePage() {
               DiagramLens
             </h1>
             <p className="text-xs text-muted-foreground">
-              Audiodrescrição de diagramas em video
+              Audiodescrição de diagramas em vídeo
             </p>
           </div>
         </div>
@@ -386,11 +387,11 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col gap-2">
                 <h2 className="text-2xl font-bold text-foreground text-balance">
-                  Torne suas aulas mais acessiveis
+                  Torne suas aulas mais acessíveis
                 </h2>
                 <p className="text-muted-foreground leading-relaxed max-w-lg text-pretty">
                   Faça upload de uma videoaula e nossa inteligência artificial
-                  ira identificar e audiodescrever automaticamente os diagramas presentes no vídeo.
+                  irá identificar e audiodescrever automaticamente os diagramas presentes no vídeo.
                 </p>
               </div>
 
@@ -443,10 +444,10 @@ export default function HomePage() {
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                aria-label="Carregar outro video"
+                aria-label="Carregar outro vídeo"
               >
                 <RotateCcw className="h-4 w-4" />
-                Novo video
+                Novo vídeo
               </Button>
             </div>
 
@@ -475,7 +476,7 @@ export default function HomePage() {
                     />
                   </div>
 
-                  <aside aria-label="Timeline de anotacoes">
+                  <aside aria-label="Timeline de anotações">
                     <AnnotationTimeline
                       annotations={processing.annotations}
                       currentTime={currentTime}
@@ -492,7 +493,7 @@ export default function HomePage() {
                 <video
                   src={videoUrl}
                   className="w-full aspect-video rounded-lg"
-                  aria-label="Pre-visualizacao do video"
+                  aria-label="Pré-visualização do vídeo"
                 />
               </div>
             )}

@@ -54,10 +54,10 @@ export function AnnotationTimeline({
         <FileSearch className="h-10 w-10 text-muted-foreground" />
         <div>
           <p className="text-sm font-medium text-foreground">
-            Nenhuma anotacao ainda
+            Nenhuma anotação ainda
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            As descricoes dos elementos figurados aparecerao aqui apos o processamento.
+            As descrições dos elementos figurados aparecerão aqui após o processamento.
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ export function AnnotationTimeline({
           Elementos encontrados
         </h2>
         <span className="text-xs text-muted-foreground">
-          {annotations.length} anotac{annotations.length !== 1 ? "oes" : "ao"}
+          {annotations.length} anotaç{annotations.length !== 1 ? "ões" : "ão"}
         </span>
       </div>
 

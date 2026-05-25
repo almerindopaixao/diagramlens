@@ -97,13 +97,13 @@ export function TTSControlsPanel({
 
       <div className="flex items-center gap-2">
         <Label htmlFor="auto-tts" className="text-xs text-muted-foreground">
-          Modo automatico
+          Modo automático
         </Label>
         <Switch
           id="auto-tts"
           checked={autoMode}
           onCheckedChange={onAutoModeChange}
-          aria-label="Ativar leitura automatica das descricoes durante reproducao do video"
+          aria-label="Ativar leitura automática das descrições durante reprodução do vídeo"
         />
       </div>
 

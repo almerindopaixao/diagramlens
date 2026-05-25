@@ -15,7 +15,7 @@ export interface BackendFrame {
   detections: YOLODetection[]
 }
 
-// --- Anotacoes (frame + descricao IA) ---
+// --- Anotações (frame + descrição IA) ---
 export interface FrameAnnotation {
   id: string
   timestamp: number
