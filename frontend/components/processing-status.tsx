@@ -163,12 +163,12 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
             return (
               <div
                 key={stage.key}
-                className={`flex items-center gap-2.5 text-sm ${
+                className={`flex items-center gap-2.5 text-sm font-medium ${
                   isDone
-                    ? "text-accent"
+                    ? "text-foreground"
                     : isActive
-                      ? "text-primary font-medium"
-                      : "text-muted-foreground"
+                      ? "text-primary"
+                      : "text-foreground/70"
                 }`}
               >
                 {isDone ? (
@@ -182,7 +182,7 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
                 )}
                 <span>{stage.label}</span>
                 {detail && (
-                  <span className="text-xs text-muted-foreground ml-auto">
+                  <span className="text-xs text-foreground/65 ml-auto">
                     {detail}
                   </span>
                 )}
@@ -194,7 +194,7 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
 
       {/* Sumario final */}
       {status === "complete" && (
-        <div className="flex flex-wrap gap-4 pt-2 text-xs text-muted-foreground border-t">
+        <div className="flex flex-wrap gap-4 pt-2 text-xs text-foreground/70 border-t">
           <span>
             {totalScenes} cenas analisadas
           </span>
@@ -202,7 +202,7 @@ export function ProcessingStatus({ state }: ProcessingStatusProps) {
             {framesWithElements} elementos encontrados
           </span>
           <span>
-            {annotations.length} descricoes geradas
+            {annotations.length} descrições geradas
           </span>
           {processingTime > 0 && (
             <span>

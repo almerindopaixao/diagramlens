@@ -111,16 +111,22 @@ export function TTSControlsPanel({
         <Label htmlFor="tts-speed" className="text-xs text-muted-foreground whitespace-nowrap">
           Velocidade: {rate.toFixed(1)}x
         </Label>
-        <Slider
-          id="tts-speed"
-          min={0.5}
-          max={2}
-          step={0.1}
-          value={[rate]}
-          onValueChange={([v]) => onRateChange(v)}
-          aria-label={`Velocidade da fala: ${rate.toFixed(1)}x`}
-          className="w-24"
-        />
+        <div
+          role="group"
+          aria-label={`Controle de velocidade da fala: ${rate.toFixed(1)}x (mínimo 0.5x, máximo 2x)`}
+        >
+          <Slider
+            id="tts-speed"
+            min={0.5}
+            max={2}
+            step={0.1}
+            value={[rate]}
+            onValueChange={([v]) => onRateChange(v)}
+            className="w-24"
+            aria-label={`Velocidade da fala: ${rate.toFixed(1)}x`}
+            aria-valuetext={`Velocidade: ${rate.toFixed(1)}x`}
+          />
+        </div>
       </div>
 
       {isSpeaking && (
