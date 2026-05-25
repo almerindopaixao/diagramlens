@@ -369,7 +369,7 @@ export default function HomePage() {
               DiagramLens
             </h1>
             <p className="text-xs text-muted-foreground">
-              Audiodescrição de diagramas em vídeo
+              Audiodescrição de diagramas em vídeos
             </p>
           </div>
         </div>
