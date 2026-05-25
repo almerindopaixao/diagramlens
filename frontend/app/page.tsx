@@ -444,7 +444,7 @@ export default function HomePage() {
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                aria-label="Carregar outro vídeo"
+                aria-label="Carregar novo vídeo"
               >
                 <RotateCcw className="h-4 w-4" />
                 Novo vídeo

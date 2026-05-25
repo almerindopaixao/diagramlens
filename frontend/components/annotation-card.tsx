@@ -96,7 +96,7 @@ export function AnnotationCard({
             size="sm"
             className="h-7 px-2 text-xs"
             onClick={() => onSeek(annotation.timestamp)}
-            aria-label={`Ir para ${formatTimestamp(annotation.timestamp)} no video`}
+            aria-label={`Ir ao trecho ${formatTimestamp(annotation.timestamp)} no video`}
           >
             <Play className="h-3 w-3" />
             Ir ao trecho

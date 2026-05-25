@@ -122,7 +122,9 @@ export function VideoUpload({ onVideoSelected, disabled }: VideoUploadProps) {
         <div
           role="button"
           tabIndex={disabled ? -1 : 0}
-          aria-label="Área de upload de vídeo. Arraste e solte ou clique para selecionar."
+          aria-label={isValidating
+                ? "Validando video..."
+                : "Arraste a videoaula aqui ou clique para selecionar um arquivo"}
           aria-disabled={disabled}
           className="flex flex-col items-center justify-center gap-4 p-12 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
           onDragOver={handleDragOver}
