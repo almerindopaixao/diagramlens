@@ -409,7 +409,7 @@ export default function HomePage() {
                       1
                     </span>
                     <span>
-                      Faça upload de um vídeo de aula (até 15 minutos)
+                      Faça upload de uma videoaula
                     </span>
                   </li>
                   <li className="flex gap-2">
@@ -504,8 +504,8 @@ export default function HomePage() {
       <footer className="border-t bg-card" role="contentinfo">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
           <p className="text-xs text-muted-foreground text-center leading-relaxed">
-            Prototipo em tecnologia assistiva. Promovendo acessibilidade e autonomia para estudantes
-            com deficiencia visual.
+            Protótipo em tecnologia assistiva. Promovendo acessibilidade e autonomia para estudantes
+            com deficiência visual.
           </p>
         </div>
       </footer>
